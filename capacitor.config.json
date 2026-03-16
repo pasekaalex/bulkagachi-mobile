@@ -1,0 +1,9 @@
+{
+  "appId": "com.bulkgames.bulkagachi",
+  "appName": "Bulkagachi",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "android": {
+    "allowMixedContent": true
+  }
+}
