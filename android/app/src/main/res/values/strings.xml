@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Bulkagachi</string>
+    <string name="title_activity_main">Bulkagachi</string>
+    <string name="package_name">com.bulked.bulkagachi</string>
+    <string name="custom_url_scheme">com.bulked.bulkagachi</string>
+</resources>
