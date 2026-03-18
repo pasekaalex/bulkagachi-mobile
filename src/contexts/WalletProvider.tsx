@@ -8,13 +8,17 @@ import '@solana/wallet-adapter-react-ui/styles.css'
 
 export function WalletProvider({ children }: { children: React.ReactNode }) {
   const wallets = useMemo(
-    () => [new PhantomWalletAdapter(), new SolflareWalletAdapter(), new CoinbaseWalletAdapter()],
+    () => [
+      new PhantomWalletAdapter(),
+      new SolflareWalletAdapter(),
+      new CoinbaseWalletAdapter(),
+    ],
     [],
   )
 
   return (
     <ConnectionProvider endpoint={SOLANA_RPC_URL}>
-      <SolanaWalletProvider wallets={wallets} autoConnect>
+      <SolanaWalletProvider wallets={wallets} autoConnect={false}>
         <WalletModalProvider>{children}</WalletModalProvider>
       </SolanaWalletProvider>
     </ConnectionProvider>

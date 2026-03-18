@@ -341,7 +341,7 @@ const handleFullReset = useCallback(() => {
       <div
         className="flex flex-col justify-between relative overflow-hidden"
         style={{
-          width: 'min(90vw, 900px)',
+          width: 'min(95vw, 900px)',
           height: '100dvh',
           maxHeight: '100dvh',
           background: '#0d0d0d',
@@ -439,7 +439,7 @@ const handleFullReset = useCallback(() => {
           }}
         >
           {/* Stats Row - stacked on mobile, side by side on desktop */}
-          <div className="flex flex-col justify-center gap-1 mb-4 px-2" style={{ maxWidth: '340px', margin: '0 auto', width: '100%' }}>
+          <div className="flex flex-col justify-center gap-0 mb-1 px-1" style={{ maxWidth: '360px', margin: '0 auto', width: '100%' }}>
             {/* Hunger */}
             <div 
               className="flex items-center gap-2 px-2 py-2 rounded-lg mx-1"
@@ -548,7 +548,7 @@ const handleFullReset = useCallback(() => {
               className="flex flex-col items-center gap-1 transition-transform hover:scale-110 active:scale-95"
             >
               <div 
-                className="w-10 md:w-14 h-10 md:h-14 rounded-full"
+                className="w-12 md:w-16 h-12 md:h-16 rounded-full"
                 style={{ 
                   backgroundColor: '#ff6b6b',
                   backgroundImage: feedIcon,
@@ -567,7 +567,7 @@ const handleFullReset = useCallback(() => {
               className="flex flex-col items-center gap-1 transition-transform hover:scale-110 active:scale-95"
             >
               <div 
-                className="w-10 md:w-14 h-10 md:h-14 flex items-center justify-center rounded-full"
+                className="w-12 md:w-16 h-12 md:h-16 flex items-center justify-center rounded-full"
                 style={{ 
                   background: 'linear-gradient(135deg, #ffd700, #ff8c00)',
                   border: '3px solid #fff',
@@ -584,7 +584,7 @@ const handleFullReset = useCallback(() => {
               className="flex flex-col items-center gap-1 transition-transform hover:scale-110 active:scale-95"
             >
               <div 
-                className="w-10 md:w-14 h-10 md:h-14 flex items-center justify-center rounded-full"
+                className="w-12 md:w-16 h-12 md:h-16 flex items-center justify-center rounded-full"
                 style={{ 
                   background: 'linear-gradient(135deg, #00ffff, #00cccc)',
                   border: '3px solid #fff',
@@ -601,7 +601,7 @@ const handleFullReset = useCallback(() => {
               className="flex flex-col items-center gap-1 transition-transform hover:scale-110 active:scale-95"
             >
               <div 
-                className="w-10 md:w-14 h-10 md:h-14 flex items-center justify-center rounded-full"
+                className="w-12 md:w-16 h-12 md:h-16 flex items-center justify-center rounded-full"
                 style={{ 
                   background: isSleeping ? 'linear-gradient(135deg, #6366f1, #4f46e5)' : 'linear-gradient(135deg, #1e1b4b, #312e81)',
                   border: '3px solid #818cf8',
@@ -618,7 +618,7 @@ const handleFullReset = useCallback(() => {
               className="flex flex-col items-center gap-1 transition-transform hover:scale-110 active:scale-95"
             >
               <div 
-                className="w-10 md:w-14 h-10 md:h-14 rounded-full"
+                className="w-12 md:w-16 h-12 md:h-16 rounded-full"
                 style={{ 
                   backgroundColor: '#10b981',
                   backgroundImage: 'url(/images/gachi-s/schmeg-shot.png)',
@@ -637,7 +637,7 @@ const handleFullReset = useCallback(() => {
               className="flex flex-col items-center gap-1 transition-transform hover:scale-110 active:scale-95"
             >
               <div 
-                className="w-10 md:w-14 h-10 md:h-14 flex items-center justify-center rounded-full"
+                className="w-12 md:w-16 h-12 md:h-16 flex items-center justify-center rounded-full"
                 style={{ 
                   backgroundColor: '#ec4899',
                   backgroundImage: 'url(/images/gachi-s/schmeg-can.png)',
@@ -656,7 +656,7 @@ const handleFullReset = useCallback(() => {
               className="flex flex-col items-center gap-1 transition-transform hover:scale-110 active:scale-95"
             >
               <div 
-                className="w-10 md:w-14 h-10 md:h-14 flex items-center justify-center rounded-full"
+                className="w-12 md:w-16 h-12 md:h-16 flex items-center justify-center rounded-full"
                 style={{ 
                   background: 'linear-gradient(135deg, #6366f1, #4f46e5)',
                   border: '3px solid #818cf8',
@@ -673,7 +673,7 @@ const handleFullReset = useCallback(() => {
               className="flex flex-col items-center gap-1 transition-transform hover:scale-110 active:scale-95"
             >
               <div 
-                className="w-10 md:w-14 h-10 md:h-14 flex items-center justify-center rounded-full"
+                className="w-12 md:w-16 h-12 md:h-16 flex items-center justify-center rounded-full"
                 style={{ 
                   background: 'linear-gradient(135deg, #f59e0b, #d97706)',
                   border: '3px solid #fbbf24',
