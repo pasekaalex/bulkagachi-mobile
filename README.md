@@ -22,6 +22,8 @@ A mobile port of the Bulkagachi pet game from Bulk OS.
 - ✅ Portrait only mode
 - ✅ App icon
 
+**Note:** Wallet connection is not available on mobile (Phantom doesn't support WebView). Leaderboard is view-only.
+
 ## Install APK
 
 1. Download the APK from Releases
