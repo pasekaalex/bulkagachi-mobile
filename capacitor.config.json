@@ -1,0 +1,12 @@
+{
+  "appId": "com.bulked.bulkagachi",
+  "appName": "Bulkagachi",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "android": {
+    "allowMixedContent": true
+  },
+  "server": {
+    "androidScheme": "https"
+  }
+}

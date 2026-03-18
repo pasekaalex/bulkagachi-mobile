@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Hulk Display';
+  src: url('/fonts/hulk.ttf') format('truetype');
+  font-display: swap;
+}
+
+@theme {
+  --color-purple-DEFAULT: #9B4DCA;
+  --color-purple-dark: #6B2D9E;
+  --color-purple-darker: #4A1D6E;
+  --color-purple-darkest: #1a0a2e;
+  --color-gold-DEFAULT: #FFD700;
+  --color-gold-dark: #FFA500;
+  --color-neon-green: #39FF14;
+  --color-bulk-bg: rgba(45, 27, 78, 0.95);
+  --color-bulk-bg-dark: rgba(26, 11, 46, 0.98);
+  --font-display: 'Hulk Display', 'Orbitron', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0a0a0f;
+  color: white;
+  overflow-x: hidden;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(26, 11, 46, 0.5);
+}
+::-webkit-scrollbar-thumb {
+  background: #9B4DCA;
+  border-radius: 3px;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 15px rgba(155, 77, 202, 0.4); }
+  50% { box-shadow: 0 0 30px rgba(155, 77, 202, 0.8); }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes glitch {
+  0%, 100% { text-shadow: 2px 0 #ff00ff, -2px 0 #00ffff; }
+  25% { text-shadow: -2px 2px #ff00ff, 2px -2px #00ffff; }
+  50% { text-shadow: 2px -2px #ff00ff, -2px 2px #00ffff; }
+  75% { text-shadow: -2px 0 #ff00ff, 2px 0 #00ffff; }
+}
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-3px) rotate(-1deg); }
+  75% { transform: translateX(3px) rotate(1deg); }
+}
+
+.animate-float { animation: float 3s ease-in-out infinite; }
+.animate-shimmer { animation: shimmer 3s linear infinite; }
+.animate-pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
+.animate-fade-in-up { animation: fadeInUp 0.6s ease-out forwards; }
+.animate-scale-in { animation: scaleIn 0.5s ease-out forwards; }
+.animate-glitch { animation: glitch 0.3s ease-in-out infinite; }
+.animate-shake { animation: shake 0.4s ease-in-out; }
+
+.text-shadow-gold {
+  text-shadow: 0 0 30px rgba(255, 215, 0, 0.6);
+}
+.text-shadow-purple {
+  text-shadow: 0 0 20px rgba(155, 77, 202, 0.6);
+}

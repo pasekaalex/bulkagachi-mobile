@@ -1,0 +1,17 @@
+{
+  "name": "Bulkagachi: Virtual Bulk Simulator",
+  "short_name": "Bulkagachi",
+  "description": "BULK - The Ultimate Bulk Experience",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a1a2e",
+  "theme_color": "#9b30ff",
+  "icons": [
+    {
+      "src": "/images/cover-baby.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
