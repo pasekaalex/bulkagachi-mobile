@@ -1,5 +1,4 @@
 import { useRef, useState, useEffect, useCallback } from 'react'
-import { BackButton } from '../../components/layout/BackButton'
 import { WalletButton } from '../../components/ui/WalletButton'
 import { useNavigate } from 'react-router'
 import { useScoreSubmission } from '../../hooks/useLeaderboard'
@@ -308,7 +307,6 @@ const handleFullReset = useCallback(() => {
   if (gameState === 'title') {
     return (
       <div className="fixed inset-0 flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #1a0a2e 0%, #2d1b4e 50%, #1a0a2e 100%)' }}>
-        <BackButton />
         
         <div className="flex flex-col items-center gap-6">
           <h1 
@@ -339,7 +337,6 @@ const handleFullReset = useCallback(() => {
   // Playing state
   return (
     <div className="fixed inset-0 flex items-start justify-center pt-2" style={{ background: 'linear-gradient(135deg, #1a0a2e 0%, #2d1b4e 50%, #1a0a2e 100%)' }}>
-      <div className="absolute top-4 left-4 z-50"><BackButton /></div>
 
       <div
         className="flex flex-col justify-between relative overflow-hidden"

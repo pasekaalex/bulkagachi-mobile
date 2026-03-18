@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { useWallet } from '@solana/wallet-adapter-react'
 import { BackButton } from '../components/layout/BackButton'
@@ -58,6 +59,7 @@ function getRankIcon(rank: number): string {
 }
 
 export default function Leaderboard() {
+  const navigate = useNavigate()
   const [activeGame, setActiveGame] = useState<string>('bulkagachi')
   const { entries, loading, refresh } = useLeaderboard(activeGame)
   const { publicKey } = useWallet()
@@ -78,7 +80,7 @@ export default function Leaderboard() {
 
   return (
     <div className="min-h-dvh flex items-center justify-center bg-gradient-to-br from-[#0a0a12] via-[#1a1025] to-[#0d0d18] p-4 sm:p-6 lg:p-8">
-      <BackButton />
+      <button onClick={() => navigate("/games/bulkagachi")} className="absolute top-4 left-4 z-50 bg-purple-600 text-white px-4 py-2 rounded-lg">← Back</button>
 
       {/* Decorative background elements */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
