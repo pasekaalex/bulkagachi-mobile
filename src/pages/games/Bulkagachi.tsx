@@ -701,7 +701,7 @@ const handleFullReset = useCallback(() => {
         {achievementToast && (
           <div
             className="absolute top-20 left-1/2 -translate-x-1/2 bg-gradient-to-r from-gold-DEFAULT to-yellow-500 text-black px-4 py-2 rounded-lg font-bold"
-            style={{ fontFamily: "'Press Start 2P', monospace", fontSize: '0.8rem' }}
+            style={{ fontFamily: "'Press Start 2P', monospace", fontSize: '1.3rem' }}
           >
             {'\u{1F3C6}'} {achievementToast}!
           </div>
@@ -782,28 +782,28 @@ const handleFullReset = useCallback(() => {
             style={{ minWidth: '320px', maxWidth: '90vw' }}
             onClick={e => e.stopPropagation()}
           >
-            <h3 className="text-white text-center mb-4" style={{ fontFamily: "'Press Start 2P', monospace", fontSize: '1rem' }}>MENU</h3>
+            <h3 className="text-white text-center mb-4" style={{ fontFamily: "'Press Start 2P', monospace", fontSize: '1.3rem' }}>MENU</h3>
             
             <div className="flex flex-col gap-4">
-              <button onClick={() => { setShowMenuModal(false); setShowHelpModal(true); }} className="bg-blue-600/50 hover:bg-blue-600 text-white py-6 px-6 rounded-xl" style={{ fontFamily: "'Press Start 2P', monospace", fontSize: '0.8rem' }}>
+              <button onClick={() => { setShowMenuModal(false); setShowHelpModal(true); }} className="bg-blue-600/50 hover:bg-blue-600 text-white py-6 px-6 rounded-xl" style={{ fontFamily: "'Press Start 2P', monospace", fontSize: '1.3rem' }}>
                 {'\u{2753}'} HELP
               </button>
-              <button onClick={handleShowCollection} className="bg-purple-DEFAULT/50 hover:bg-purple-DEFAULT text-white py-6 px-6 rounded-xl" style={{ fontFamily: "'Press Start 2P', monospace", fontSize: '0.8rem' }}>
+              <button onClick={handleShowCollection} className="bg-purple-DEFAULT/50 hover:bg-purple-DEFAULT text-white py-6 px-6 rounded-xl" style={{ fontFamily: "'Press Start 2P', monospace", fontSize: '1.3rem' }}>
                 {'\u{1F4D6}'} COLLECTION
               </button>
-              <button onClick={() => { setShowMenuModal(false); handleShowAchievements(); }} className="bg-yellow-600/50 hover:bg-yellow-500 text-white py-6 px-6 rounded-xl" style={{ fontFamily: "'Press Start 2P', monospace", fontSize: '0.8rem' }}>
+              <button onClick={() => { setShowMenuModal(false); handleShowAchievements(); }} className="bg-yellow-600/50 hover:bg-yellow-500 text-white py-6 px-6 rounded-xl" style={{ fontFamily: "'Press Start 2P', monospace", fontSize: '1.3rem' }}>
                 {'\u{1F3C6}'} ACHIEVEMENTS
               </button>
-              <button onClick={handleToggleMusic} className="bg-purple-DEFAULT/50 hover:bg-purple-DEFAULT text-white py-6 px-6 rounded-xl" style={{ fontFamily: "'Press Start 2P', monospace", fontSize: '0.8rem' }}>
+              <button onClick={handleToggleMusic} className="bg-purple-DEFAULT/50 hover:bg-purple-DEFAULT text-white py-6 px-6 rounded-xl" style={{ fontFamily: "'Press Start 2P', monospace", fontSize: '1.3rem' }}>
                 {'\u{1F3B5}'} MUSIC: {musicEnabled ? 'ON' : 'OFF'}
               </button>
-              <button onClick={handleRename} className="bg-blue-600/50 hover:bg-blue-500 text-white py-6 px-6 rounded-xl" style={{ fontFamily: "'Press Start 2P', monospace", fontSize: '0.8rem' }}>
+              <button onClick={handleRename} className="bg-blue-600/50 hover:bg-blue-500 text-white py-6 px-6 rounded-xl" style={{ fontFamily: "'Press Start 2P', monospace", fontSize: '1.3rem' }}>
                 📛 RENAME
               </button>
-              <button onClick={handleSubmitScore} disabled={submitState === 'submitting'} className="bg-orange-600/50 hover:bg-orange-500 disabled:bg-gray-600 text-white py-6 px-6 rounded-xl" style={{ fontFamily: "'Press Start 2P', monospace", fontSize: '0.8rem' }}>
+              <button onClick={handleSubmitScore} disabled={submitState === 'submitting'} className="bg-orange-600/50 hover:bg-orange-500 disabled:bg-gray-600 text-white py-6 px-6 rounded-xl" style={{ fontFamily: "'Press Start 2P', monospace", fontSize: '1.3rem' }}>
                 📤 SUBMIT AGE {submitState === 'submitting' ? '...' : submitState === 'error' ? ' ❌' : submitState === 'submitted' ? ' ✅' : ''}
               </button>
-              <button onClick={handleViewLeaderboard} className="bg-yellow-600/50 hover:bg-yellow-500 text-white py-6 px-6 rounded-xl" style={{ fontFamily: "'Press Start 2P', monospace", fontSize: '0.8rem' }}>
+              <button onClick={handleViewLeaderboard} className="bg-yellow-600/50 hover:bg-yellow-500 text-white py-6 px-6 rounded-xl" style={{ fontFamily: "'Press Start 2P', monospace", fontSize: '1.3rem' }}>
                 🏆 LEADERBOARD
               </button>
               <div className="bg-gray-800/50 text-white py-3 px-4 rounded-xl text-xs text-center" style={{ fontFamily: "'Press Start 2P', monospace" }}>
@@ -814,18 +814,18 @@ const handleFullReset = useCallback(() => {
                   return hours > 0 ? `${hours}h ${mins}m` : `${mins}m`
                 })()}
               </div>
-              <button onClick={handleRequestNotifications} className="bg-purple-DEFAULT/50 hover:bg-purple-DEFAULT text-white py-6 px-6 rounded-xl" style={{ fontFamily: "'Press Start 2P', monospace", fontSize: '0.8rem' }}>
+              <button onClick={handleRequestNotifications} className="bg-purple-DEFAULT/50 hover:bg-purple-DEFAULT text-white py-6 px-6 rounded-xl" style={{ fontFamily: "'Press Start 2P', monospace", fontSize: '1.3rem' }}>
                 {'\u{1F514}'} NOTIFICATIONS: {notificationsEnabled ? 'ON' : 'OFF'}
               </button>
               {isGhostMode && (
                 <button onClick={() => {
                   engineRef.current?.fullReset()
                   setShowMenuModal(false)
-                }} className="bg-purple-600/50 hover:bg-purple-500 text-white py-6 px-6 rounded-xl" style={{ fontFamily: "'Press Start 2P', monospace", fontSize: '0.8rem' }}>
+                }} className="bg-purple-600/50 hover:bg-purple-500 text-white py-6 px-6 rounded-xl" style={{ fontFamily: "'Press Start 2P', monospace", fontSize: '1.3rem' }}>
                   👻 NEW BULK
                 </button>
               )}
-              <button onClick={() => setShowMenuModal(false)} className="bg-gray-600 hover:bg-gray-500 text-white py-6 px-6 rounded-xl" style={{ fontFamily: "'Press Start 2P', monospace", fontSize: '0.8rem' }}>
+              <button onClick={() => setShowMenuModal(false)} className="bg-gray-600 hover:bg-gray-500 text-white py-6 px-6 rounded-xl" style={{ fontFamily: "'Press Start 2P', monospace", fontSize: '1.3rem' }}>
                 CLOSE
               </button>
             </div>
@@ -904,7 +904,7 @@ const handleFullReset = useCallback(() => {
                 </button>
               )}
               
-              <button onClick={() => setShowTravelModal(false)} className="bg-gray-600 hover:bg-gray-500 text-white py-3 px-4 rounded-lg mt-2" style={{ fontFamily: "'Press Start 2P', monospace", fontSize: '0.6rem' }}>
+              <button onClick={() => setShowTravelModal(false)} className="bg-gray-600 hover:bg-gray-500 text-white py-3 px-4 rounded-lg mt-2" style={{ fontFamily: "'Press Start 2P', monospace", fontSize: '0.9rem' }}>
                 CLOSE
               </button>
             </div>
@@ -938,7 +938,7 @@ const handleFullReset = useCallback(() => {
               ))}
             </div>
             
-            <button onClick={() => setShowAchievementsModal(false)} className="w-full mt-4 bg-gray-600 hover:bg-gray-500 text-white py-3 px-4 rounded-lg" style={{ fontFamily: "'Press Start 2P', monospace", fontSize: '0.6rem' }}>
+            <button onClick={() => setShowAchievementsModal(false)} className="w-full mt-4 bg-gray-600 hover:bg-gray-500 text-white py-3 px-4 rounded-lg" style={{ fontFamily: "'Press Start 2P', monospace", fontSize: '0.9rem' }}>
               CLOSE
             </button>
           </div>
@@ -955,7 +955,7 @@ const handleFullReset = useCallback(() => {
           >
             <h3 className="text-white text-center mb-4" style={{ fontFamily: "'Press Start 2P', monospace", fontSize: '0.9rem' }}>{'\u{1F4D6}'} COLLECTION</h3>
             
-            <div className="text-white space-y-2" style={{ fontFamily: "'Press Start 2P', monospace", fontSize: '0.5rem' }}>
+            <div className="text-white space-y-2" style={{ fontFamily: "'Press Start 2P', monospace", fontSize: '0.7rem' }}>
               <div>{'\u{1F3AE}'} PLAYS: {collection.totalPlays}</div>
               <div>{'\u{1F37C}'} FEEDS: {collection.totalFeeds}</div>
               <div>{'\u{1F9FC}'} CLEANS: {collection.totalCleans}</div>
@@ -964,7 +964,7 @@ const handleFullReset = useCallback(() => {
               <div>{'\u{1F3C6}'} ACHIEVEMENTS: {collection.achievementCount}/{achievementsList.length}</div>
             </div>
             
-            <button onClick={() => setShowCollectionModal(false)} className="w-full mt-4 bg-gray-600 hover:bg-gray-500 text-white py-3 px-4 rounded-lg" style={{ fontFamily: "'Press Start 2P', monospace", fontSize: '0.6rem' }}>
+            <button onClick={() => setShowCollectionModal(false)} className="w-full mt-4 bg-gray-600 hover:bg-gray-500 text-white py-3 px-4 rounded-lg" style={{ fontFamily: "'Press Start 2P', monospace", fontSize: '0.9rem' }}>
               CLOSE
             </button>
           </div>
@@ -1020,7 +1020,7 @@ const handleFullReset = useCallback(() => {
                 </div>
               </div>
               
-              <button onClick={() => setShowLevelModal(false)} className="w-full mt-4 bg-yellow-600 hover:bg-yellow-500 text-white py-3 px-4 rounded-lg" style={{ fontFamily: "'Press Start 2P', monospace", fontSize: '0.6rem' }}>
+              <button onClick={() => setShowLevelModal(false)} className="w-full mt-4 bg-yellow-600 hover:bg-yellow-500 text-white py-3 px-4 rounded-lg" style={{ fontFamily: "'Press Start 2P', monospace", fontSize: '0.9rem' }}>
                 CLOSE
               </button>
             </div>
@@ -1182,7 +1182,7 @@ const handleFullReset = useCallback(() => {
                 )}
               </div>
               
-              <button onClick={() => setShowAgeProgressModal(false)} className="w-full bg-purple-600 hover:bg-purple-500 text-white py-3 px-4 rounded-lg" style={{ fontFamily: "'Press Start 2P', monospace", fontSize: '0.6rem' }}>
+              <button onClick={() => setShowAgeProgressModal(false)} className="w-full bg-purple-600 hover:bg-purple-500 text-white py-3 px-4 rounded-lg" style={{ fontFamily: "'Press Start 2P', monospace", fontSize: '0.9rem' }}>
                 CLOSE
               </button>
             </div>
@@ -1196,7 +1196,7 @@ const handleFullReset = useCallback(() => {
       {showMoodGuideModal && (
         <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50" onClick={() => setShowMoodGuideModal(false)}>
           <div className="bg-gradient-to-b from-orange-900 to-orange-950 border-2 border-orange-400 rounded-2xl p-4" style={{ minWidth: '340px' }} onClick={e => e.stopPropagation()}>
-            <h3 className="text-orange-400 text-center mb-4" style={{ fontFamily: "'Press Start 2P', monospace", fontSize: '0.8rem' }}>😀 MOOD GUIDE</h3>
+            <h3 className="text-orange-400 text-center mb-4" style={{ fontFamily: "'Press Start 2P', monospace", fontSize: '1.3rem' }}>😀 MOOD GUIDE</h3>
             <div className="space-y-2 text-xs">
               <div className="bg-green-900/50 p-3 rounded"><span className="text-green-400 font-bold text-sm">😊 HAPPY</span> - All stats above 70%</div>
               <div className="bg-yellow-900/50 p-3 rounded"><span className="text-yellow-400 font-bold text-sm">😐 OKAY</span> - Stats between 50-70%</div>
@@ -1217,7 +1217,7 @@ const handleFullReset = useCallback(() => {
             style={{ minWidth: '340px', maxHeight: '80vh', overflowY: 'auto' }}
             onClick={e => e.stopPropagation()}
           >
-            <h3 className="text-white text-center mb-4" style={{ fontFamily: "'Press Start 2P', monospace", fontSize: '0.8rem' }}>{'\u{2753}'} HOW TO PLAY</h3>
+            <h3 className="text-white text-center mb-4" style={{ fontFamily: "'Press Start 2P', monospace", fontSize: '1.3rem' }}>{'\u{2753}'} HOW TO PLAY</h3>
             
             <div className="space-y-4 text-xs" style={{ fontFamily: "'Press Start 2P', monospace" }}>
               
@@ -1381,7 +1381,7 @@ const handleFullReset = useCallback(() => {
             style={{ minWidth: '320px', maxWidth: '90vw' }}
           >
             <div className="text-6xl mb-4">👻</div>
-            <h3 className="text-white mb-4" style={{ fontFamily: "'Press Start 2P', monospace", fontSize: '1rem' }}>SORRY, YOUR BULK HAS DIED</h3>
+            <h3 className="text-white mb-4" style={{ fontFamily: "'Press Start 2P', monospace", fontSize: '1.3rem' }}>SORRY, YOUR BULK HAS DIED</h3>
             
             <div className="text-gray-300 text-xs mb-6 space-y-2 text-left" style={{ fontFamily: "'Press Start 2P', monospace" }}>
               <p>Your Bulk has passed on to the afterlife...</p>
@@ -1404,14 +1404,14 @@ const handleFullReset = useCallback(() => {
                   setGrowthStage('BABY')
                 }} 
                 className="bg-red-600 hover:bg-red-500 text-white py-3 px-4 rounded-lg"
-                style={{ fontFamily: "'Press Start 2P', monospace", fontSize: '0.6rem' }}
+                style={{ fontFamily: "'Press Start 2P', monospace", fontSize: '0.9rem' }}
               >
                 🔄 START FRESH (RESET)
               </button>
               <button 
                 onClick={() => setShowGhostModeIntro(false)} 
                 className="bg-purple-600 hover:bg-purple-500 text-white py-3 px-4 rounded-lg"
-                style={{ fontFamily: "'Press Start 2P', monospace", fontSize: '0.6rem' }}
+                style={{ fontFamily: "'Press Start 2P', monospace", fontSize: '0.9rem' }}
               >
                 👻 EXPLORE GHOST MODE
               </button>
