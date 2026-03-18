@@ -1,8 +1,15 @@
 apply plugin: 'com.android.application'
 
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
 android {
     namespace = "com.bulkgames.bulkagachi"
     compileSdk = rootProject.ext.compileSdkVersion
+    
     defaultConfig {
         applicationId "com.bulkgames.bulkagachi"
         minSdkVersion rootProject.ext.minSdkVersion
