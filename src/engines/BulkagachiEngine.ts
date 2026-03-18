@@ -1478,6 +1478,10 @@ export class BulkagachiEngine {
     if (this.hasEgg) {
       // Reduce hatch time by 1 second
       this.eggHatchAt = Math.max(this.eggStartTime + 1000, this.eggHatchAt - 1000)
+      // Give XP for petting egg
+      this.xp += 5
+      this.checkLevelUp()
+      this.callbacks.onLevelChange?.(this.level, this.xp, this.getXpNeeded())
       this.playSound('pet')
       
       // Track consecutive pets for roll
@@ -1496,6 +1500,10 @@ export class BulkagachiEngine {
         this.birthTime = Date.now()
         this.showMessage('🥚 THE EGG HATCHED!')
         this.callbacks.onGrowthStageChange?.('BABY')
+        // Give XP for hatching
+        this.xp += 25
+        this.checkLevelUp()
+        this.callbacks.onLevelChange?.(this.level, this.xp, this.getXpNeeded())
       }
       return
     } else {
