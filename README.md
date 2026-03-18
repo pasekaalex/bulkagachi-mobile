@@ -4,7 +4,7 @@ A mobile port of the Bulkagachi pet game from Bulk OS.
 
 ## Download
 
-📥 **Download APK:** https://github.com/pasekaalex/bulkagachi-mobile/releases/tag/v1.0.2
+📥 **Download APK:** https://github.com/pasekaalex/bulkagachi-mobile/releases/tag/v1.0.3
 
 ## Features
 
