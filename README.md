@@ -4,12 +4,11 @@ A mobile port of the Bulkagachi pet game from Bulk OS.
 
 ## Download
 
-📥 **Download APK:** https://github.com/pasekaalex/bulkagachi-mobile/releases/tag/v1.0.1
+📥 **Download APK:** https://github.com/pasekaalex/bulkagachi-mobile/releases/tag/v1.0.2
 
 ## Features
 
 - ✅ Pet stats (hunger, happiness, cleanliness, energy)
-- ✅ Feed, Play, Sleep, Clean actions
 - ✅ 8 action buttons (FEED, PLAY, CLEAN, SLEEP, MEDS, SCHMEG, REST, TRAVEL)
 - ✅ Evolution stages (Egg → Baby → Teen → Adult → Elder)
 - ✅ 6 locations (Cabin, Camp, City, Beach, Mountain, Club)
@@ -17,8 +16,11 @@ A mobile port of the Bulkagachi pet game from Bulk OS.
 - ✅ Poop system with golden poops
 - ✅ Day/night cycle
 - ✅ Achievements & collection
+- ✅ Leaderboard (wallet connected)
 - ✅ Local storage persistence
 - ✅ Mobile-optimized UI
+- ✅ Portrait only mode
+- ✅ App icon
 
 ## Install APK
 
