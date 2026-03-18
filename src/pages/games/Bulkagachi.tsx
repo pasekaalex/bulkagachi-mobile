@@ -1,8 +1,6 @@
 import { useRef, useState, useEffect, useCallback } from 'react'
-import { WalletButton } from '../../components/ui/WalletButton'
 import { useNavigate } from 'react-router'
 import { useScoreSubmission } from '../../hooks/useLeaderboard'
-import { useWallet } from '@solana/wallet-adapter-react'
 import {
   BulkagachiEngine,
   type BulkagachiCallbacks,
@@ -73,7 +71,6 @@ export default function Bulkagachi() {
 
   // Wallet & navigation
   const navigate = useNavigate()
-  const { publicKey } = useWallet()
   const { submit, state: submitState, error: submitError } = useScoreSubmission()
   
   const [achievements, setAchievements] = useState<Record<string, boolean>>({})
@@ -133,13 +130,13 @@ export default function Bulkagachi() {
       onNotificationsEnabledChange: setNotificationsEnabled,
       onDeath: (ageMinutes: number) => {
         // Auto-submit score when Bulk becomes a ghost
-        if (publicKey) {
+        if (false) {
           submit('bulkagachi', ageMinutes)
         }
       },
       onAutoSubmit: (ageMinutes: number) => {
         // Auto-submit every hour
-        if (publicKey) {
+        if (false) {
           submit('bulkagachi', ageMinutes)
         }
       },
@@ -243,8 +240,7 @@ const handleFullReset = useCallback(() => {
   }, [])
   
   const handleSubmitScore = useCallback(() => {
-    if (!publicKey) {
-      alert('Connect wallet first!')
+    if (false) {
       return
     }
     if (isGhostMode) {
@@ -253,7 +249,7 @@ const handleFullReset = useCallback(() => {
     }
     const rawAge = engineRef.current?.getAgeInHours() || 0
     const ageMinutes = Math.floor(rawAge * 60)
-    const bulkName = engineRef.current?.getBulkName() || publicKey.toBase58().slice(0, 8)
+    const bulkName = engineRef.current?.getBulkName() || 'Player'
     
     if (submitState === 'error') {
       alert(`❌ Previous submit failed: ${submitError || 'Unknown error'}`)
@@ -262,7 +258,7 @@ const handleFullReset = useCallback(() => {
     } else {
       submit('bulkagachi', ageMinutes, { name: bulkName, stage: growthStage, level: level })
     }
-  }, [submit, publicKey, isGhostMode, growthStage, submitState, submitError])
+  }, [submit, isGhostMode, growthStage, submitState, submitError])
   
   const handleViewLeaderboard = useCallback(() => {
     navigate('/leaderboard')
@@ -409,7 +405,6 @@ const handleFullReset = useCallback(() => {
                 </span>
               </div>
               <div className="hidden md:block">
-                <WalletButton />
               </div>
               <button
                 onClick={() => setShowMenuModal(true)}
@@ -425,7 +420,6 @@ const handleFullReset = useCallback(() => {
           </div>
           {/* Mobile wallet - shown only on mobile */}
           <div className="md:hidden">
-            <WalletButton />
           </div>
         </div>
         
