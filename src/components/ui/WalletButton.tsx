@@ -20,13 +20,13 @@ export function WalletButton() {
       <button
         onClick={() => setVisible(true)}
         disabled={connecting}
-        className="flex items-center justify-center gap-1 py-0.5 px-1 bg-gradient-to-br from-purple-DEFAULT to-purple-dark border border-gold-DEFAULT rounded-lg text-white font-bold text-xs font-[family-name:var(--font-display)] shadow-[0_0_10px_rgba(155,77,202,0.4)] transition-all cursor-pointer hover:scale-105 hover:shadow-[0_0_15px_rgba(155,77,202,0.6)]"
+        className="flex items-center justify-center gap-2 py-2 px-3 bg-gradient-to-br from-purple-DEFAULT to-purple-dark border border-gold-DEFAULT rounded-lg text-white font-bold text-sm font-[family-name:var(--font-display)] shadow-[0_0_10px_rgba(155,77,202,0.4)] transition-all cursor-pointer hover:scale-105 hover:shadow-[0_0_15px_rgba(155,77,202,0.6)]"
       >
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-3 h-3">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-5 h-5">
           <rect x="2" y="6" width="20" height="12" rx="2" />
           <path d="M2 10h20" />
         </svg>
-        {connecting ? '...' : '👛'}
+        {connecting ? '...' : 'CONNECT'}
       </button>
     )
   }

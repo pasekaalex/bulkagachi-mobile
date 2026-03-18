@@ -339,9 +339,9 @@ const handleFullReset = useCallback(() => {
     <div className="fixed inset-0 flex items-start justify-center pt-2" style={{ background: 'linear-gradient(135deg, #1a0a2e 0%, #2d1b4e 50%, #1a0a2e 100%)' }}>
 
       <div
-        className="flex flex-col justify-between relative overflow-hidden"
+        className="flex flex-col relative overflow-hidden"
         style={{
-          width: 'min(95vw, 900px)',
+          width: 'min(96vw, 900px)',
           height: '100dvh',
           maxHeight: '100dvh',
           background: '#0d0d0d',
@@ -419,7 +419,7 @@ const handleFullReset = useCallback(() => {
                   border: '2px solid #fff'
                 }}
               >
-                <span className="text-white text-[7px] md:text-xs" style={{ fontFamily: "'Press Start 2P', monospace" }}>☰ MENU</span>
+                <span className="text-white text-[9px] md:text-xs" style={{ fontFamily: "'Press Start 2P', monospace" }}>☰ MENU</span>
               </button>
             </div>
           </div>
@@ -439,7 +439,7 @@ const handleFullReset = useCallback(() => {
           }}
         >
           {/* Stats Row - stacked on mobile, side by side on desktop */}
-          <div className="flex flex-col justify-center gap-0 mb-1 px-1" style={{ maxWidth: '360px', margin: '0 auto', width: '100%' }}>
+          <div className="flex flex-col justify-center gap-0 -mt-2 mb-2 px-1" style={{ maxWidth: '360px', margin: '0 auto', width: '100%' }}>
             {/* Hunger */}
             <div 
               className="flex items-center gap-2 px-2 py-2 rounded-lg mx-1"
@@ -542,7 +542,7 @@ const handleFullReset = useCallback(() => {
           </div>
 
           {/* Action Buttons - 2x3 grid on desktop */}
-          <div className="grid grid-cols-4 gap-1 md:gap-3 md:px-4">
+          <div className="grid grid-cols-4 gap-2 md:gap-3 md:px-4 mt-2">
             <button 
               onClick={handleFeed} 
               className="flex flex-col items-center gap-1 transition-transform hover:scale-110 active:scale-95"
