@@ -1480,8 +1480,8 @@ export class BulkagachiEngine {
       this.eggHatchAt = Math.max(this.eggStartTime + 1000, this.eggHatchAt - 1000)
       // Give XP for petting egg
       this.xp += 5
-      this.checkLevelUp()
-      this.callbacks.onLevelChange?.(this.level, this.xp, this.getXpNeeded())
+      this.xp >= this.getXPForLevel(this.level) ? (this.level++, this.xp -= this.getXPForLevel(this.level)) : null
+      this.callbacks.onLevelChange?.(this.level, this.xp, this.getXPForLevel(this.level))
       this.playSound('pet')
       
       // Track consecutive pets for roll
@@ -1502,8 +1502,8 @@ export class BulkagachiEngine {
         this.callbacks.onGrowthStageChange?.('BABY')
         // Give XP for hatching
         this.xp += 25
-        this.checkLevelUp()
-        this.callbacks.onLevelChange?.(this.level, this.xp, this.getXpNeeded())
+        this.xp >= this.getXPForLevel(this.level) ? (this.level++, this.xp -= this.getXPForLevel(this.level)) : null
+        this.callbacks.onLevelChange?.(this.level, this.xp, this.getXPForLevel(this.level))
       }
       return
     } else {
