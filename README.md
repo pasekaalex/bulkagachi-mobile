@@ -4,7 +4,7 @@ A mobile port of the Bulkagachi pet game from Bulk OS.
 
 ## Download
 
-📥 **Download APK:** https://github.com/pasekaalex/bulkagachi-mobile/releases/tag/v1.0.3
+📥 **Download Latest APK:** https://github.com/pasekaalex/bulkagachi-mobile/releases/latest
 
 ## Features
 
@@ -16,19 +16,28 @@ A mobile port of the Bulkagachi pet game from Bulk OS.
 - ✅ Poop system with golden poops
 - ✅ Day/night cycle
 - ✅ Achievements & collection
-- ✅ Leaderboard (wallet connected)
+- ✅ Leaderboard (view scores from website)
+- ✅ XP system with level-ups
+- ✅ XP popup notifications
 - ✅ Local storage persistence
 - ✅ Mobile-optimized UI
 - ✅ Portrait only mode
-- ✅ App icon
-
-**Note:** Wallet connection is not available on mobile (Phantom doesn't support WebView). Leaderboard is view-only.
 
 ## Install APK
 
 1. Download the APK from Releases
-2. Enable "Install unknown apps" in phone settings
+2. Enable "Install unknown apps" in your phone's security settings
 3. Open the APK file to install
+
+## Growth Stages
+
+| Stage | Time |
+|-------|------|
+| Egg | 1 hour |
+| Baby | 0-8 hours |
+| Teen | 8-22 hours |
+| Adult | 22-96 hours |
+| Elder | 96+ hours |
 
 ## Build from Source
 
@@ -40,12 +49,13 @@ cd bulkagachi-mobile
 # Install dependencies
 npm install
 
-# Run in browser
-npm run dev
-
-# Build APK
+# Build web
 npm run build
+
+# Add Android platform
 npx cap add android
+
+# Open in Android Studio
 npx cap open android
 
 # In Android Studio: Build → Build APK
@@ -55,8 +65,13 @@ npx cap open android
 
 - React + TypeScript
 - Vite
-- Capacitor (for mobile wrapping)
+- Capacitor (mobile wrapping)
 
 ## Credits
 
-Original game from [bulked.lol](https://bulked.lol/games/bulkagachi)
+- Original game: [bulked.lol](https://bulked.lol/games/bulkagachi)
+- Built with permission from Bulk creator
+
+## License
+
+MIT
